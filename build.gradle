@@ -1,14 +1,15 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'maven'
 
 version = '1.0.0-SNAPSHOT'
 
+tasks.withType(JavaCompile) { options.encoding = "UTF-8" }
+
 repositories {
-  mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-  compile 'org.apache.commons:commons-lang3:3.0'
-
-  testCompile 'junit:junit:4.12'
+    compile 'org.apache.commons:commons-lang3:3.0'
+    testCompile 'junit:junit:4.12'
 }
